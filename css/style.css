@@ -52,20 +52,8 @@ p {
   font-size: inherit;
 }
 
-footer.page-footer {
-  margin: 0;
-}
-
 .bluechef {
 background-color: #3f8a99;
-}
-.bluechef-text {
-color: #0000bf;
-}
-.block {
-width: 100%;
-margin-bottom: 5px;
-margin-top: 5px
 }
 
 .text-center {
