@@ -1,4 +1,4 @@
-const endpoint_url = 'http://51018003.p-web.click/backend/api';
+const endpoint_url = 'https://51018003.p-web.click/backend/api';
 
 function getPaintings() {
   fetch(endpoint_url + "/paintings/paintingdetail")
@@ -8,7 +8,7 @@ function getPaintings() {
       var paintingsHTML = "";
       data.paintings.forEach(function(pa) {
         paintingsHTML += `
-          <div class = "col s6">
+          <div class = "col s15 m6">
             <div class="card">
               <a href="./paintings.html?painting_id=${pa.Painting_ID}">
                 <div class="card-image waves-effect waves-block waves-light">
@@ -67,7 +67,7 @@ function getRecommendations() {
       var recomsHTML = "";
       data.recommendations.forEach(function(re) {
         recomsHTML += `
-          <div class = "col s6">
+          <div class = "col s15 m6">
             <div class="card">
               <a href="./recommendations.html?r_code=${re.R_code}">
                 <div class="card-image waves-effect waves-block waves-light">
@@ -99,13 +99,13 @@ function getPaintingDetail( painting_id ){
   paintinginfo += `
   <div class="container">
   <h4 id="section_title">Painting Detail</h4>
-  <div class="col s6">
+  <div class="col s15 m6">
       <img class="responsive-img" src="img/${pa.Image}"/>
       <p> Biodata
         <a href="./painters.html?painter_id=${pa.Painter_ID}">${pa.Name}</a>
       </p>
   </div>
-  <div class="col s6">
+  <div class="col s15 m6">
   <table class="">
   <thead>
     <tr>
@@ -171,7 +171,7 @@ function getPainterDetail( painter_id ){
     </div>
   </div>
   <div class="container">
-  <div class="col s6">
+  <div class="col s15 m6">
   <br>
   <table class="">
   <thead>
@@ -236,10 +236,10 @@ function getRecommendationDetail( r_code ){
     recominfo = `
   <div class="container">
   <h4 id="section_title">Recommedations</h4>
-  <div class="col s6">
+  <div class="col s15 m6">
      <img class="responsive-img" src="img/${re.Image}"/>
   </div>
-  <div class= "col s6">
+  <div class= "col s15 m6">
   <table class="">
   <thead>
     <tr>
